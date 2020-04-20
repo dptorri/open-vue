@@ -2,7 +2,7 @@
   <section class="section">
     <div class="columns">
       <div class="column">
-        <AppHeader pagetitle="Card Page" />
+        <AppHeader pagetitle="Card Page" pagesubtitle="A short description of card component" />
         <pre><code>import Vue, { VNode } from 'vue'
 
   const Component = Vue.extend({
@@ -27,7 +27,7 @@
   </section>
 </template>
 
-<script lang="type">
+<script lang="ts">
 import AppHeader from '~/components/AppHeader'
 
 export default {

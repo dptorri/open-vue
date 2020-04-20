@@ -5,7 +5,7 @@
         {{ pagetitle }}
       </h1>
       <p class="subtitle is-4">
-        An imposing <strong>hero banner</strong> to showcase something
+        {{ pagesubtitle }}
       </p>
     </div>
 
@@ -13,12 +13,17 @@
   </div>
 </template>
 
-<script lang="type">
+<script lang="ts">
 export default {
   name: 'AppHeader',
-  props: [
-    'pagetitle'
-  ]
+  props: {
+    pagetitle: {
+      type: String
+    },
+    pagesubtitle: {
+        type: String
+    }
+  }
 }
 </script>
 
