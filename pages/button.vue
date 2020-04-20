@@ -1,17 +1,20 @@
 <template>
   <section class="section">
     <div class="columns is-mobile">
-      <h1>{{ pageTitle }}</h1>
+      <AppHeader pagetitle="Button" pagesubtitle="A short description of card component" />
     </div>
   </section>
 </template>
 
 <script lang="ts">
+import AppHeader from '~/components/AppHeader'
+
 export default {
+  components: {
+    AppHeader
+  },
   data () {
-    return {
-      pageTitle: 'Button'
-    }
+    return {}
   }
 }
 </script>

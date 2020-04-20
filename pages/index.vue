@@ -1,18 +1,18 @@
 <template>
   <section class="section">
     <div class="columns is-mobile">
-      <h1>{{ pageTitle }}</h1>
+      <AppHeader pagetitle="OpenVue" pagesubtitle="A short description of OpenVue" />
     </div>
   </section>
 </template>
 
 <script lang="type">
-import Card from '~/components/Card'
+import AppHeader from '~/components/AppHeader'
 
 export default {
   name: 'HomePage',
   components: {
-    Card
+    AppHeader
   },
 
   data () {
