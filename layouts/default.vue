@@ -11,8 +11,8 @@
           href="/"
         >
           <img
-            src="~assets/buefy.png"
-            alt="Buefy"
+            src="~assets/open-view-white.svg"
+            alt="OpenVue"
             height="28"
           >
         </a>
