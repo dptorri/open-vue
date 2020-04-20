@@ -64,8 +64,15 @@ export default {
           to: { name: 'index' }
         },
         {
+          title: 'Button',
+          to: { name: 'button' }
+        },
+        {
+          title: 'Card',
+          to: { name: 'card' }
+        },
+        {
           title: 'List',
-          icon: 'lightbulb',
           to: { name: 'list' }
         }
       ]
