@@ -80,3 +80,19 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+pre {
+  code {
+    overflow-x: auto;
+    color: #525252;
+    white-space: pre;
+    padding: 0;
+    font-size: 0.85rem;
+    line-height: 1.6rem;
+    display: block;
+  }
+}
+
+</style>
