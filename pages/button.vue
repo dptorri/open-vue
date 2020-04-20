@@ -8,10 +8,12 @@
 
 <script lang="ts">
 import AppHeader from '~/components/AppHeader'
+import AppCodeSnippet from '~/components/AppCodeSnippet'
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    AppCodeSnippet
   },
   data () {
     return {}

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="column">
     <div class="bd-header-titles">
       <h1 class="title">
         {{ pagetitle }}
@@ -18,10 +18,12 @@ export default {
   name: 'AppHeader',
   props: {
     pagetitle: {
-      type: String
+      type: String,
+      default: ''
     },
     pagesubtitle: {
-      type: String
+      type: String,
+      default: ''
     }
   }
 }

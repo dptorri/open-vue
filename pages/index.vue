@@ -6,7 +6,7 @@
   </section>
 </template>
 
-<script lang="type">
+<script lang="ts">
 import AppHeader from '~/components/AppHeader'
 
 export default {
