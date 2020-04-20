@@ -6,6 +6,7 @@
 </template>
 
 <script lang="ts">
+// TODO: make copy button work
 export default ({
   name: 'AppCodeSnippet',
   props: {
