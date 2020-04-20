@@ -1,8 +1,6 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
-      <AppHeader pagetitle="Lists" pagesubtitle="A short description of lists component" />
-    </div>
+    <AppHeader pagetitle="Lists" pagesubtitle="A short description of lists component" />
   </section>
 </template>
 

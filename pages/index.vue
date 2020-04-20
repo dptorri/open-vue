@@ -1,8 +1,6 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
-      <AppHeader pagetitle="OpenVue" pagesubtitle="A short description of OpenVue" />
-    </div>
+    <AppHeader pagetitle="OpenVue" pagesubtitle="A short description of OpenVue" />
   </section>
 </template>
 

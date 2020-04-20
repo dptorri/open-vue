@@ -1,10 +1,8 @@
 <template>
   <section class="section">
-    <div class="columns">
-      <div class="column">
-        <AppHeader pagetitle="Card Page" pagesubtitle="A short description of card component" />
+    <AppHeader pagetitle="Card Page" pagesubtitle="A short description of card component" />
 
-        <AppCodeSnippet>import Vue, { VNode } from 'vue'
+    <AppCodeSnippet>import Vue, { VNode } from 'vue'
 
 const Component = Vue.extend({
 data () {
@@ -23,8 +21,6 @@ render (createElement): VNode {
 return createElement('div', this.greeting)
 }
 })</AppCodeSnippet>
-      </div>
-    </div>
   </section>
 </template>
 

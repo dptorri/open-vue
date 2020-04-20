@@ -1,7 +1,9 @@
 <template>
-  <div class="app-codesnippet">
-    <span>Copy</span>
-    <pre><code><slot></slot></code></pre>
+  <div>
+    <div class="app-codesnippet">
+      <span>Copy</span>
+      <pre><code><slot></slot></code></pre>
+    </div>
   </div>
 </template>
 

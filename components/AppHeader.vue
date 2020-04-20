@@ -1,5 +1,5 @@
 <template>
-  <div class="column">
+  <div>
     <div class="bd-header-titles">
       <h1 class="title">
         {{ pagetitle }}
