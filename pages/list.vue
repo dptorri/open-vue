@@ -7,18 +7,15 @@
 </template>
 
 <script lang="type">
-import Card from '~/components/Card'
-
 export default {
-  name: 'HomePage',
-  components: {
-    Card
-  },
-
   data () {
     return {
-      pageTitle: 'Home Page'
+      pageTitle: 'Lists'
     }
   }
 }
 </script>
+
+<style lang="sass">
+
+</style>

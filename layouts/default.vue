@@ -25,8 +25,8 @@
       </div>
     </nav>
 
-    <section class="main-content columns">
-      <aside class="column is-2 section">
+    <section class="main-content columns is-mobile">
+      <aside class="column is-4 section">
         <p class="menu-label is-hidden-touch">
           General
         </p>
@@ -39,13 +39,14 @@
               :to="item.to"
               exact-active-class="is-active"
             >
-              <b-icon :icon="item.icon" /> {{ item.title }}
+              <!-- <b-icon :icon="item.icon" /> {{ item.title }} -->
+              {{ item.title }}
             </nuxt-link>
           </li>
         </ul>
       </aside>
 
-      <div class="container column is-10">
+      <div class="container column is-8">
         <nuxt />
       </div>
     </section>
@@ -63,9 +64,9 @@ export default {
           to: { name: 'index' }
         },
         {
-          title: 'Inspire',
+          title: 'List',
           icon: 'lightbulb',
-          to: { name: 'inspire' }
+          to: { name: 'list' }
         }
       ]
     }
