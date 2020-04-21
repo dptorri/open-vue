@@ -1,30 +1,32 @@
 <template>
   <div>
-    <div class="container">
-      <nav
-        class="navbar header has-shadow is-primary"
-        role="navigation"
-        aria-label="main navigation"
-      >
-        <div class="navbar-brand">
-          <a
-            class="navbar-item"
-            href="/"
-          >
-            <img
-              src="~assets/open-view-white.svg"
-              alt="OpenVue"
-              height="28"
+    <div class="app-top-bar">
+      <div class="container">
+        <nav
+          class="navbar header has-shadow is-primary"
+          role="navigation"
+          aria-label="main navigation"
+        >
+          <div class="navbar-brand">
+            <a
+              class="navbar-item"
+              href="/"
             >
-          </a>
+              <img
+                src="~assets/open-view-white.svg"
+                alt="OpenVue"
+                height="28"
+              >
+            </a>
 
-          <div class="navbar-burger">
-            <span />
-            <span />
-            <span />
+            <div class="navbar-burger">
+              <span />
+              <span />
+              <span />
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
 
     <div class="container">
@@ -86,6 +88,7 @@ export default {
 </script>
 
 <style lang="scss">
+// Bulma Custom Settings
 // Set your brand colors
 $blue: hsl(217, 71%, 53%);
 
@@ -104,6 +107,10 @@ $link: $blue;
 @import "../node_modules/bulma/sass/layout/_all.sass";
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 
+// App Style
+.app-top-bar {
+  background-color: $primary;
+}
 pre {
   code {
     overflow-x: auto;
