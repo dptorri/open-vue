@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="app-codesnippet">
-      <b-button size="is-small is-primary copy-code" @click="copyCode()">
+      <b-button size="is-small is-primary copy-code" @click="copyCode()" ref="copyMyCode">
         Copy
       </b-button>
       <pre><code class="code-to-copy"><slot /></code></pre>
@@ -29,7 +29,7 @@ export default Vue.extend ({
   },
   methods: {
     copyCode () {
-      const copyCode: any = document.querySelector('.copy-code');
+      const copyCode: any = this.$refs.copyMyCode;
       const copiedCode: any = copyCode.closest('.code-to-copy');
 
       copiedCode.focus();
