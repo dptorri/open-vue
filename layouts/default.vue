@@ -26,7 +26,7 @@
         </div>
       </nav>
     </div>
-    
+
     <div class="container">
       <section class="main-content columns is-mobile">
         <aside class="column is-4 section">
@@ -86,6 +86,23 @@ export default {
 </script>
 
 <style lang="scss">
+// Set your brand colors
+$blue: hsl(217, 71%, 53%);
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $blue;
+$link: $blue;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/utilities/_all.sass";
 
 pre {
   code {
