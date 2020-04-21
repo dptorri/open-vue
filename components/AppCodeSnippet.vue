@@ -11,7 +11,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { copy } from './js/modules/utilities'
 
 // TODO: make copy button work
 export default Vue.extend ({
@@ -27,18 +26,19 @@ export default Vue.extend ({
     }
   },
   computed: {
-    // dude() {
-    //   console.log(copy);
-    //   }
   },
   methods: {
     copyCode () {
-      const copyCode: any = this.$refs.copyMyCode;
-      // const copiedCode: any = copyCode.closest('.code-to-copy');
-      // copiedCode.focus();
-      // copiedCode.select();
+      this.$slots.default.forEach((node) => {
+        // Do a console.log(node) to see other
+        // property you can access and use.
+        console.log(node.elm.textContent);
+        // console.log(node);
 
-      console.log (copyCode);
+        // e.g. <div ref="text">
+        // this.$slots.text;
+        // document.execCommand("copy");
+      })
     }
   }
 })
