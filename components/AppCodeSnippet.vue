@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="app-codesnippet">
-      <b-button type="is-small is-primary copy-code" @click="copyCode()" ref="copyMyCode">
+      <b-button class="copy-code" type="is-small is-primary" @click="copyCode()" ref="copyMyCode">
         Copy
       </b-button>
       <pre><code class="code-to-copy"><slot /></code></pre>
@@ -11,6 +11,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { copy } from './js/modules/utilities'
 
 // TODO: make copy button work
 export default Vue.extend ({
@@ -26,6 +27,9 @@ export default Vue.extend ({
     }
   },
   computed: {
+    // dude() {
+    //   console.log(copy);
+    //   }
   },
   methods: {
     copyCode () {
