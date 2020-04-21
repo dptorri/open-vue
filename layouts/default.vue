@@ -11,8 +11,8 @@
           href="/"
         >
           <img
-            src="~assets/buefy.png"
-            alt="Buefy"
+            src="~assets/open-view-white.svg"
+            alt="OpenVue"
             height="28"
           >
         </a>
@@ -25,8 +25,8 @@
       </div>
     </nav>
 
-    <section class="main-content columns">
-      <aside class="column is-2 section">
+    <section class="main-content columns is-mobile">
+      <aside class="column is-4 section">
         <p class="menu-label is-hidden-touch">
           General
         </p>
@@ -39,20 +39,21 @@
               :to="item.to"
               exact-active-class="is-active"
             >
-              <b-icon :icon="item.icon" /> {{ item.title }}
+              <!-- <b-icon :icon="item.icon" /> {{ item.title }} -->
+              {{ item.title }}
             </nuxt-link>
           </li>
         </ul>
       </aside>
 
-      <div class="container column is-10">
+      <div class="container column is-8">
         <nuxt />
       </div>
     </section>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   data () {
     return {
@@ -63,12 +64,35 @@ export default {
           to: { name: 'index' }
         },
         {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
+          title: 'Button',
+          to: { name: 'button' }
+        },
+        {
+          title: 'Card',
+          to: { name: 'card' }
+        },
+        {
+          title: 'List',
+          to: { name: 'list' }
         }
       ]
     }
   }
 }
 </script>
+
+<style lang="scss">
+
+pre {
+  code {
+    overflow-x: auto;
+    color: #525252;
+    white-space: pre;
+    padding: 0;
+    font-size: 0.85rem;
+    line-height: 1.6rem;
+    display: block;
+  }
+}
+
+</style>

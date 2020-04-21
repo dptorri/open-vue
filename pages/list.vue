@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <AppHeader pagetitle="OpenVue" pagesubtitle="A short description of OpenVue" />
+    <AppHeader pagetitle="Lists" pagesubtitle="A short description of lists component" />
   </section>
 </template>
 
@@ -8,15 +8,15 @@
 import AppHeader from '~/components/AppHeader'
 
 export default {
-  name: 'HomePage',
   components: {
     AppHeader
   },
-
   data () {
-    return {
-      pageTitle: 'Home Page'
-    }
+    return {}
   }
 }
 </script>
+
+<style lang="sass">
+
+</style>
