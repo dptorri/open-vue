@@ -92,7 +92,8 @@ export default {
 
 // Bulma Custom Settings
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
+// $family-sans-serif: "Nunito", sans-serif;
+$family-sans-serif: 'Roboto', sans-serif;
 $primary: $blue;
 $link: $blue;
 
@@ -125,11 +126,12 @@ $link: $blue;
   }
 
   ul {
-    .menu-list {
-      li {
-        > a {
+    &.app-menu-list {
+      > li {
+        font-weight: 500;
+        a {
           color: #101010;
-          .is-active {
+          &.is-active {
             color: $primary;
           }
         }
