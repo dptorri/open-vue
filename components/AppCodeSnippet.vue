@@ -1,15 +1,23 @@
 <template>
   <div>
-    <div class="app-codesnippet">
-      <span>Copy</span>
-      <pre><code><slot></slot></code></pre>
+    <div class="app-codesnippet" ref="code-snippet">
+      <b-button 
+      class="copy-code" 
+      type="is-small is-primary" 
+      @click="copyCode()" 
+      ref="copyMyCode">
+        Copy
+      </b-button>
+      <pre><code class="code-to-copy" ref="codeToCopy"><slot /></code></pre>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import Vue from 'vue'
+
 // TODO: make copy button work
-export default ({
+export default Vue.extend ({
   name: 'AppCodeSnippet',
   props: {
     codesnippet: {
@@ -20,17 +28,46 @@ export default ({
   data () {
     return {
     }
+  },
+  computed: {
+  },
+  methods: {
+    copyCode () {
+      const copiedCode: Element = this.$refs.codeToCopy.innerText;
+      const codeElement: any = document.createElement("textarea");
+
+      codeElement.value = copiedCode;     
+      document.body.appendChild(codeElement);
+      codeElement.select();
+      document.execCommand("copy");
+      codeElement.remove();
+    }
   }
 })
 </script>
 
 <style lang="scss">
+@import "~assets/scss/globals.scss";
+
 .app-codesnippet {
-    .copy-code {
-        display: inline-block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
+    position: relative;
+    margin-bottom: 24px;
+  pre {
+    border-radius: 6px;
+  }
+  .copy-code {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+  }
+  &:hover {
+    pre {
+      background-color: $grey-lightest;
     }
+    .copy-code {
+      display: inline-block;
+    }
+  }
 }
 </style>
