@@ -1,10 +1,14 @@
 <template>
   <div>
-    <div class="app-codesnippet">
-      <b-button class="copy-code" type="is-small is-primary" @click="copyCode()" ref="copyMyCode">
+    <div class="app-codesnippet" ref="code-snippet">
+      <b-button 
+      class="copy-code" 
+      type="is-small is-primary" 
+      @click="copyCode()" 
+      ref="copyMyCode">
         Copy
       </b-button>
-      <pre><code class="code-to-copy"><slot /></code></pre>
+      <pre><code class="code-to-copy" ref="codeToCopy"><slot /></code></pre>
     </div>
   </div>
 </template>
@@ -29,16 +33,14 @@ export default Vue.extend ({
   },
   methods: {
     copyCode () {
-      this.$slots.default.forEach((node) => {
-        // Do a console.log(node) to see other
-        // property you can access and use.
-        console.log(node.elm.textContent);
-        // console.log(node);
-
-        // e.g. <div ref="text">
-        // this.$slots.text;
-        // document.execCommand("copy");
-      })
+      const copiedCode: Element = this.$refs.codeToCopy.innerText;
+      const codeElement: any = document.createElement("textarea");
+      
+      codeElement.value = copiedCode;     
+      document.body.appendChild(codeElement);
+      codeElement.select();
+      document.execCommand("copy");
+      codeElement.remove();
     }
   }
 })

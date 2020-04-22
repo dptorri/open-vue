@@ -21,6 +21,8 @@ render (createElement): VNode {
 return createElement('div', this.greeting)
 }
 })</AppCodeSnippet>
+
+<AppCodeSnippet>some other code</AppCodeSnippet>
   </section>
 </template>
 
