@@ -35,7 +35,7 @@ export default Vue.extend ({
     copyCode () {
       const copiedCode: Element = this.$refs.codeToCopy.innerText;
       const codeElement: any = document.createElement("textarea");
-      
+
       codeElement.value = copiedCode;     
       document.body.appendChild(codeElement);
       codeElement.select();
@@ -47,16 +47,27 @@ export default Vue.extend ({
 </script>
 
 <style lang="scss">
+@import "~assets/scss/globals.scss";
+
 .app-codesnippet {
     position: relative;
+    margin-bottom: 24px;
   pre {
     border-radius: 6px;
   }
   .copy-code {
-      display: inline-block;
+      display: none;
       position: absolute;
       top: 10px;
       right: 10px;
+  }
+  &:hover {
+    pre {
+      background-color: $grey-lightest;
+    }
+    .copy-code {
+      display: inline-block;
+    }
   }
 }
 </style>

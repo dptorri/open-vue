@@ -88,10 +88,9 @@ export default {
 </script>
 
 <style lang="scss">
-// Bulma Custom Settings
-// Set your brand colors
-$blue: hsl(217, 71%, 53%);
+@import "~assets/scss/globals.scss";
 
+// Bulma Custom Settings
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
 $primary: $blue;
@@ -110,6 +109,9 @@ $link: $blue;
 // App Style
 .app-top-bar {
   background-color: $primary;
+}
+* {
+  transition: all .1s;
 }
 pre {
   code {
