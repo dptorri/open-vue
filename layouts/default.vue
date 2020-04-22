@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-open-vue">
     <div class="app-top-bar">
       <div class="container">
         <nav
@@ -35,7 +35,7 @@
           <p class="menu-label is-hidden-touch">
             General
           </p>
-          <ul class="menu-list">
+          <ul class="app-menu-list">
             <li
               v-for="(item, key) of items"
               :key="key"
@@ -103,26 +103,38 @@ $link: $blue;
 @import "../node_modules/bulma/sass/elements/_all.sass";
 @import "../node_modules/bulma/sass/form/_all.sass";
 @import "../node_modules/bulma/sass/grid/_all.sass";
-@import "../node_modules/bulma/sass/layout/_all.sass";
-@import "../node_modules/bulma/sass/utilities/_all.sass";
 
 // App Style
-.app-top-bar {
-  background-color: $primary;
-}
-* {
-  transition: all .1s;
-}
-pre {
-  code {
-    overflow-x: auto;
-    color: #525252;
-    white-space: pre;
-    padding: 0;
-    font-size: 0.85rem;
-    line-height: 1.6rem;
-    display: block;
+.app-open-vue {
+  .app-top-bar {
+    background-color: $primary;
+  }
+  * {
+    transition: all .1s;
+  }
+  pre {
+    code {
+      overflow-x: auto;
+      color: #525252;
+      white-space: pre;
+      padding: 0;
+      font-size: 0.85rem;
+      line-height: 1.6rem;
+      display: block;
+    }
+  }
+
+  ul {
+    .menu-list {
+      li {
+        > a {
+          color: #101010;
+          .is-active {
+            color: $primary;
+          }
+        }
+      }
+    }
   }
 }
-
 </style>
